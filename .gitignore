@@ -1,0 +1,12 @@
+# Folders
+__pycache__/
+kada/
+
+# Files
+*.xlsx
+*.csv
+
+# Environments
+.env
+.venv
+
