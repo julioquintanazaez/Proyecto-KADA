@@ -13,6 +13,9 @@ from classifier.voting_classifier import Voting_ProductClassifier as VPClassifie
 from db.db_conector import DatabaseConnector
 from recomender.recomender import Recomender
 
+from schemas.matrix_response import MatrixResponse, ListResponse
+from typing import List
+
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -153,33 +156,28 @@ async def retrain_model():
         return HTTPException (status_code=404, detail="Model untrained...")  
 
 
-@app.get("/get_predictions_matrix", response_class=JSONResponse)  
+@app.get("/get_predictions_matrix", response_model=List[List[int]])  #response_model=List[List[int]]
 async def get_predictions_matrix():
    
     if clf_voting._IS_MODEL_TRAINING:
         # Return the confusion matrix
         cm, tags = clf_voting.get_cm()
-
         print(tags)
-        print(cm)
-
-        return "Correct"
+        return cm
 
     else:
         return HTTPException (status_code=404, detail="Model untrained...")  
     
 
-@app.get("/get_tags", response_class=JSONResponse)  
+@app.get("/get_tags", response_model=List[str])  
 async def get_tags():
    
     if clf_voting._IS_MODEL_TRAINING:
         # Return the confusion matrix
         tags = clf_voting.get_tags()
 
-        print(tags)
-
-        return "Correct"
-
+        return tags
+    
     else:
         return HTTPException (status_code=404, detail="Model untrained...")  
 
