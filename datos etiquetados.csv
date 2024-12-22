@@ -1,0 +1,456 @@
+,id,name,current_price,tag,tag_updated_at
+0,25229,Frijoles negros 15 lbs,67.2,frijoles,2024-12-21 20:08:33
+1,25385,Frijoles Colorados (10 Lb),39.01,frijoles,2024-12-21 20:08:33
+2,25384,Frijoles Negros (10 Lb),33.48,frijoles,2024-12-21 20:08:33
+3,7265, Frijoles bayos (4.53 kg / 10 lb) ,25.0,frijoles,2024-12-21 20:08:33
+4,7297,Frijoles bayos (4.08 kg / 9 lb),22.5,frijoles,2024-12-21 20:08:33
+5,7325, Frijoles mantequilla (4.53 kg / 10 lb) ,22.06,frijoles,2024-12-21 20:08:33
+6,7403,Frijoles bayos (3.62 kg / 8 lb),20.0,frijoles,2024-12-21 20:08:33
+7,7399, Frijoles mantequilla (4.08 kg / 9 lb) ,19.85,frijoles,2024-12-21 20:08:33
+8,7350, Frijoles negros (4.54 kg / 10 lb) ,19.34,frijoles,2024-12-21 20:08:33
+9,7329, Frijol negro (4.53 kg / 10 lb) ,19.23,frijoles,2024-12-21 20:08:33
+10,24741,Frijol Colorado deCancio Foods (5kg),17.86,frijoles,2024-12-21 20:08:33
+11,7357, Frijoles mantequilla (3.62 kg / 8 lb) ,17.65,frijoles,2024-12-21 20:08:33
+12,7326,Frijoles bayos (3.17 kg / 7 lb),17.5,frijoles,2024-12-21 20:08:33
+13,7377, Frijoles colorados limpios (2.26 kg / 5 lb) ,15.9,frijoles,2024-12-21 20:08:33
+14,22311, Frijoles cargamanto rojo Dale (2.27 kg / 5 lb) ,15.68,frijoles,2024-12-21 20:08:33
+15,24739,Frijol Negro deCancio Foods (5kg),15.54,frijoles,2024-12-21 20:08:33
+16,7260, Frijoles mantequilla (3.17 kg / 7 lb) ,15.44,frijoles,2024-12-21 20:08:33
+17,19259, Frijoles negros Dale (2.27 kg / 5 lb) ,15.34,frijoles,2024-12-21 20:08:33
+18,19525,Frijoles colorados Dale (2.27 kg / 5 lb),15.34,frijoles,2024-12-21 20:08:33
+19,20346, Frijoles colorados (2.27 kg / 5 lb) ,15.01,frijoles,2024-12-21 20:08:33
+20,7264,Frijoles bayos (2.72 kg / 6 lb),15.0,frijoles,2024-12-21 20:08:33
+21,7245, Frijoles negros (2.26 kg / 5 lb) ,13.7,frijoles,2024-12-21 20:08:33
+22,7250, Frijoles negros (2.26 kg / 5 lb) ,13.7,frijoles,2024-12-21 20:08:33
+23,17729, Frijoles colorados (2.26 kg / 5 lb) ,13.7,frijoles,2024-12-21 20:08:33
+24,17732, Frijoles bayo (2.26 kg / 5 lb) ,13.7,frijoles,2024-12-21 20:08:33
+25,7259, Frijoles mantequilla (2.72 kg / 6 lb) ,13.24,frijoles,2024-12-21 20:08:33
+26,24219,Frijoles colorados (4 lb / 1.85 kg),13.0,frijoles,2024-12-21 20:08:33
+27,22806, Frijol colorado (2 kg / 4.4 lb) ,12.82,frijoles,2024-12-21 20:08:33
+28,7253, Frijoles negros (3 kg / 6.6 lb) ,12.79,frijoles,2024-12-21 20:08:33
+29,21603,Frijoles bayos (2.26 kg / 5 lb),12.5,frijoles,2024-12-21 20:08:33
+30,7388, Frijol blanco (2 kg / 4.4 lb) ,12.18,frijoles,2024-12-21 20:08:33
+31,24282,Frijoles mantequillas (4 lb / 1.85 kg),12.0,frijoles,2024-12-21 20:08:33
+32,24608,Frijol Negro (5 Lb),11.5,frijoles,2024-12-21 20:08:33
+33,22807, Frijoles colorados (2.3 kg / 5 lb) ,11.19,frijoles,2024-12-21 20:08:33
+34,7356, Frijoles mantequilla (2.26 kg / 5 lb) ,11.03,frijoles,2024-12-21 20:08:33
+35,7320, Frijoles negros (2.5 kg / 5.51 lb) ,10.66,frijoles,2024-12-21 20:08:33
+36,7277, Frijoles colorados (2.27 kg / 5 lb) ,10.14,frijoles,2024-12-21 20:08:33
+37,21605,Frijoles bayos (1.81 kg / 4 lb),10.0,frijoles,2024-12-21 20:08:33
+38,24218,Frijoles negros (4 lb / 1.85 kg),10.0,frijoles,2024-12-21 20:08:33
+39,7394, Frijoles negros (2.27 kg / 5 lb) ,9.71,frijoles,2024-12-21 20:08:33
+40,20619, Frijoles negros (2 kg / 4.4 lb) ,9.64,frijoles,2024-12-21 20:08:33
+41,7322, Frijol negro (2.2 kg / 5 lb) ,9.62,frijoles,2024-12-21 20:08:33
+42,15979, Frijoles colorados limpios (1.36 kg / 3 lb) ,9.54,frijoles,2024-12-21 20:08:33
+43,18952,Frijol California (2 kg / 4.4 lb),8.97,frijoles,2024-12-21 20:08:33
+44,18164,Frijoles Colorados (1.36 kg / 3 lb),8.96,frijoles,2024-12-21 20:08:33
+45,7398, Frijoles mantequilla (1.81 kg / 4 lb) ,8.82,frijoles,2024-12-21 20:08:33
+46,7391, Frijoles negros (2 kg / 4.4 lb) ,8.53,frijoles,2024-12-21 20:08:33
+47,7202,Frijoles negros criollos Super Yu (1 kg / 2.2 lb),8.52,frijoles,2024-12-21 20:08:33
+48,844, Frijoles blancos cocidos Montey (2.5 Kg / 5.5 lb) ,8.49,frijoles,2024-12-21 20:08:33
+49,7317, Frijoles colorados (1.36 kg / 3 lb) ,8.49,frijoles,2024-12-21 20:08:33
+50,7338,Frijoles blancos (1 kg / 2.2 lb),8.07,frijoles,2024-12-21 20:08:33
+51,7274, Frijoles bayos (1 kg / 2.2 lb) ,7.97,frijoles,2024-12-21 20:08:33
+52,7251, Frijoles colorados (1 kg / 2.2 lb) ,7.88,frijoles,2024-12-21 20:08:33
+53,16944,Frijoles Negros (2.27 kg / 5 lb),7.88,frijoles,2024-12-21 20:08:33
+54,7242, Frijol negro (1.36 kg / 3 lb ) ,7.67,frijoles,2024-12-21 20:08:33
+55,7239, Frijoles colorados (1.36 kg / 3 lb) ,7.65,frijoles,2024-12-21 20:08:33
+56,18166, Frijoles colorados (1.3 kg / 3 lb) ,7.53,frijoles,2024-12-21 20:08:33
+57,7319, Frijoles bayos ( 1.36 kg / 3 lb) ,7.5,frijoles,2024-12-21 20:08:33
+58,23719, Frijoles colorados (908 g / 2 lb) ,7.16,frijoles,2024-12-21 20:08:33
+59,7387,Frijoles negros (1.36 kg / 3 lb),7.06,frijoles,2024-12-21 20:08:33
+60,20084, Alubias rojas - Frijoles - al natural Mocitos (2.5 kg / 5.51 lb) ,6.99,frijoles,2024-12-21 20:08:33
+61,20086, Alubia negra - Frijoles - al natural Mocitos (2.5 kg / 5.51 lb) ,6.99,frijoles,2024-12-21 20:08:33
+62,20087, Alubias blancas - Frijoles - al natural Mocitos (2.5 kg / 5.51 lb) ,6.99,frijoles,2024-12-21 20:08:33
+63,7292, Frijoles negros (1 kg / 2.2 lb) ,6.79,frijoles,2024-12-21 20:08:33
+64,7241, Frijoles de mantequilla (1.36 kg / 3 lb) ,6.62,frijoles,2024-12-21 20:08:33
+65,18167, Frijoles colorados (1 kg / 2.2 lb) ,6.58,frijoles,2024-12-21 20:08:33
+66,7283, Frijoles negros (1.5 kg / 3.31 lb) ,6.4,frijoles,2024-12-21 20:08:33
+67,7395,Frijoles negros Vima Foods (1 kg / 2.20 lb),6.27,frijoles,2024-12-21 20:08:33
+68,22310, Frijoles cargamanto rojo Dale (907 g / 2.0 lb) ,6.27,frijoles,2024-12-21 20:08:33
+69,21713, Frijoles colorados (1 kg / 2.2 lb) ,6.16,frijoles,2024-12-21 20:08:33
+70,7280,Frijol negro Los Granos (1 kg / 2.2 lb),5.89,frijoles,2024-12-21 20:08:33
+71,7238, Frijoles negros (1.36 kg / 3 lb) ,5.81,frijoles,2024-12-21 20:08:33
+72,19258, Frijoles negros Dale (907 g / 2 lb) ,5.8,frijoles,2024-12-21 20:08:33
+73,19527,Frijoles colorados Dale (907 g / 2 lb),5.8,frijoles,2024-12-21 20:08:33
+74,7351, Frijol negro (1.3 kg / 3 lb) ,5.77,frijoles,2024-12-21 20:08:33
+75,7314,Frijol Negro Los Granos (1 kg / 2.2 lb),5.75,frijoles,2024-12-21 20:08:33
+76,21714,Frijoles negros (1 kg / 2.2 lb),5.57,frijoles,2024-12-21 20:08:33
+77,7316, Frijol negro (1 kg / 2.2 lb) ,5.3,frijoles,2024-12-21 20:08:33
+78,7407, Frijol bayo Ubirama (1 kg / 2.2 lb) ,5.3,frijoles,2024-12-21 20:08:33
+79,20620, Frijoles negros (1 kg / 2.2 lb) ,5.0,frijoles,2024-12-21 20:08:33
+80,21604, Frijoles bayos (907 g / 2 lb) ,5.0,frijoles,2024-12-21 20:08:33
+81,25299,Frijoles bayos 1 lb,5.0,frijoles,2024-12-21 20:08:33
+82,25301,Frijoles colorados 1 lb,5.0,frijoles,2024-12-21 20:08:33
+83,25302,Frijoles Negros 1 lb,5.0,frijoles,2024-12-21 20:08:33
+84,7217,Frijoles colorados FrutiSel (1 kg / 2.2 lb),4.89,frijoles,2024-12-21 20:08:33
+85,19528,Frijoles blancos (1 kg / 2.2 lb),4.79,frijoles,2024-12-21 20:08:33
+86,20347, Frijoles negros (908 g / 2 lb) ,4.77,frijoles,2024-12-21 20:08:33
+87,7199,Frijoles negros Frutisel (1 kg / 2.2 lb),4.76,frijoles,2024-12-21 20:08:33
+88,16946,Frijoles negros (1.36 kg / 3 lb),4.73,frijoles,2024-12-21 20:08:33
+89,7330,Frijoles colorados (680 g / 1.5 lb),4.66,frijoles,2024-12-21 20:08:33
+90,19796, Frijoles negros (1 kg / 2.2 lb) ,4.59,frijoles,2024-12-21 20:08:33
+91,20621,Frijoles colorados (1 kg / 2.2 lb),4.52,frijoles,2024-12-21 20:08:33
+92,7355, Frijoles mantequilla (907 g / 2 lb) ,4.41,frijoles,2024-12-21 20:08:33
+93,24623,Frijoles bayos 1 lb,4.38,frijoles,2024-12-21 20:08:33
+94,24625,Frijoles colorados 1 lb,4.38,frijoles,2024-12-21 20:08:33
+95,24626,Frijoles Negros 1 lb,4.38,frijoles,2024-12-21 20:08:33
+96,74414,Frijoles mantequilla Criollo (1 kg / 2.2 lb),4.32,frijoles,2024-12-21 20:08:33
+97,7252, Frijoles negros (1 kg / 2.2 lb) ,4.26,frijoles,2024-12-21 20:08:33
+98,7256, Frijol pinto El Fresno (1 kg / 2.2 lb) ,4.19,frijoles,2024-12-21 20:08:33
+99,18562, Frijol bayo El Fresno (1 kg / 2.2 lb) ,4.19,frijoles,2024-12-21 20:08:33
+100,16942, Frijoles blancos -alubias blancas- La Cata (500 g / 1.1 lb) ,3.92,frijoles,2024-12-21 20:08:33
+101,7187, Frijoles negros Don JosÃ© (1 kg / 2.2 lb) ,3.86,frijoles,2024-12-21 20:08:33
+102,7349, Frijoles blancos (453.5 g / 1 lb) ,3.82,frijoles,2024-12-21 20:08:33
+103,25390,Frijoles negros (1lb),3.75,frijoles,2024-12-21 20:08:33
+104,7285, Frijoles bayos (453.5 g / 1 lb) ,3.73,frijoles,2024-12-21 20:08:33
+105,7293, Frijoles colorados (454 g / 1 lb) ,3.71,frijoles,2024-12-21 20:08:33
+106,21017,Frijoles negros Yeya (1 kg / 2.2 lb),3.64,frijoles,2024-12-21 20:08:33
+107,7254, Frijoles colorados (453.5 g / 1 lb) ,3.63,frijoles,2024-12-21 20:08:33
+108,7346,Frijol negro limpio (1 kg / 2.2 lb),3.61,frijoles,2024-12-21 20:08:33
+109,16465, Frijol negro Verde Valle (1 kg / 2.2 lb) ,3.49,frijoles,2024-12-21 20:08:33
+110,7390,Frijol negro San Diego (1 kg / 2.2 lb),3.48,frijoles,2024-12-21 20:08:33
+111,20798, Frijoles negros (1 kg / 2.2 lb) ,3.48,frijoles,2024-12-21 20:08:33
+112,7249, Frijoles negros (454 g / 1 lb) ,3.42,frijoles,2024-12-21 20:08:33
+113,7284, Frijol colorado (454 g / 1 lb) ,3.42,frijoles,2024-12-21 20:08:33
+114,7323, Frijol colorado (454 g / 1 lb) ,3.42,frijoles,2024-12-21 20:08:33
+115,7382, Frijol blanco (454 g / 1 lb) ,3.42,frijoles,2024-12-21 20:08:33
+116,7405,Frijol negro (1 kg / 2.2 lb),3.4,frijoles,2024-12-21 20:08:33
+117,7404, Frijol negro Rico Prato (1 kg / 2.2 lb) ,3.34,frijoles,2024-12-21 20:08:33
+118,23457, Frijol negro (1 kg / 2.2 lb) ,3.34,frijoles,2024-12-21 20:08:33
+119,20353,Frijol negro Prato (1 kg / 2.2 lb),3.32,frijoles,2024-12-21 20:08:33
+120,24280,Frijoles Negros Goya (24oz),3.28,frijoles,2024-12-21 20:08:33
+121,24740,Frijol Negro deCancio Foods (1kg),3.25,frijoles,2024-12-21 20:08:33
+122,74493,Frijoles colorados antioqueÃ±os con tocino San Jorge (300 g / 10.58 oz),3.15,frijoles,2024-12-21 20:08:33
+123,7327, Frijol negro Verde Valle (1 kg / 2.2 lb) ,3.14,frijoles,2024-12-21 20:08:33
+124,22309, Frijoles cargamanto rojo Dale (454 g / 1 lb) ,3.14,frijoles,2024-12-21 20:08:33
+125,19257, Frijoles negros Dale (454 g / 1 lb) ,3.07,frijoles,2024-12-21 20:08:33
+126,74395,Frijol colorado calidad extra Miau (500 g / 1.1 lb),3.07,frijoles,2024-12-21 20:08:33
+127,74399,Frijol blanco calidad extra Miau (500 g / 1.1 lb),3.07,frijoles,2024-12-21 20:08:33
+128,21018, Frijoles colorados Marcos (500 g / 1.10 lb) ,3.05,frijoles,2024-12-21 20:08:33
+129,7389, Frijoles negros (454 g / 1 lb) ,3.01,frijoles,2024-12-21 20:08:33
+130,7257,Frijol negro El Fresno (1 kg / 2.2 lb),2.99,frijoles,2024-12-21 20:08:33
+131,7331, Frijoles negros limpios (680 g / 1.5 lb) ,2.99,frijoles,2024-12-21 20:08:33
+132,17730, Frijoles negros Huerto San Genaro (500 g / 1.1 lb) ,2.99,frijoles,2024-12-21 20:08:33
+133,18168, Frijoles colorados Huerto San Genaro (500 g / 1.1 lb) ,2.99,frijoles,2024-12-21 20:08:33
+134,7392, Frijoles negros (453.5 g / 1 lb) ,2.97,frijoles,2024-12-21 20:08:33
+135,7289, Frijol bayo (500 g / 1.10 lb) ,2.89,frijoles,2024-12-21 20:08:33
+136,19526,Frijoles colorados Dale (454 g / 1 lb),2.89,frijoles,2024-12-21 20:08:33
+137,7263,Frijoles blancos -Alubias- Marcos (500 g / 1.10 lb),2.88,frijoles,2024-12-21 20:08:33
+138,7321, Frijol negro (500 g / 1.1 lb) ,2.88,frijoles,2024-12-21 20:08:33
+139,18951,Frijoles Negros (460 g / 1 lb ),2.87,frijoles,2024-12-21 20:08:33
+140,74325,Frijoles colorados Torino (500 g / 1.10 lb),2.86,frijoles,2024-12-21 20:08:33
+141,7354, Frijoles negros Gourmet (500 g / 1.1 lb) ,2.8,frijoles,2024-12-21 20:08:33
+142,7255, Frijol negro (454 g / 1 lb) ,2.74,frijoles,2024-12-21 20:08:33
+143,23986, Frijol bayo (454 g / 1 lb) ,2.74,frijoles,2024-12-21 20:08:33
+144,7340,Frijol negro Penelas (500 g / 1.10 lb),2.7,frijoles,2024-12-21 20:08:33
+145,7270, Frijoles colorados Marcos (500 g / 1.1 lb) ,2.69,frijoles,2024-12-21 20:08:33
+146,7379,Frijoles colorados extra Miau (500 g / 1.1 lb),2.69,frijoles,2024-12-21 20:08:33
+147,7272,Frijoles blanco PuÃ±ado (500 g / 1.10 lb),2.66,frijoles,2024-12-21 20:08:33
+148,7365, Frijoles negros Goya (397 g / 14 oz) ,2.59,frijoles,2024-12-21 20:08:33
+149,18162,Frijoles blancos Huerto San Genaro (500 g / 1.1 lb),2.58,frijoles,2024-12-21 20:08:33
+150,7318, Frijoles colorados (454 g / 1 lb) ,2.57,frijoles,2024-12-21 20:08:33
+151,7352, Frijoles negros Penelas (500 g / 1.10 lb) ,2.55,frijoles,2024-12-21 20:08:33
+152,7324, Frijol colorado (500 g / 1.10 lb) ,2.53,frijoles,2024-12-21 20:08:33
+153,18163, Frijol colorado (454 g / 1 lb) ,2.53,frijoles,2024-12-21 20:08:33
+154,7378, Frijoles blancos extra Miau (500 g / 1.1 lb) ,2.51,frijoles,2024-12-21 20:08:33
+155,7347, Frijoles bayos (454 g / 1 lb) ,2.5,frijoles,2024-12-21 20:08:33
+156,15978,Frijoles colorados Marcos (500 g / 1.10 lb),2.49,frijoles,2024-12-21 20:08:33
+157,21310, Alubias - frijoles - rojas calidad extra Miau (500 g / 1.1 lb) ,2.49,frijoles,2024-12-21 20:08:33
+158,21312, Alubias - frijoles - blancas calidad extra Miau (500 g / 1.1 lb) ,2.49,frijoles,2024-12-21 20:08:33
+159,15683, Frijoles negros Marcos (500 g / 1.1 lb) ,2.48,frijoles,2024-12-21 20:08:33
+160,23720, Frijoles colorados extra Miau (500 g / 1.1 lb) ,2.47,frijoles,2024-12-21 20:08:33
+161,7353, Frijoles blancos Goya (397 g / 14 oz) ,2.46,frijoles,2024-12-21 20:08:33
+162,20352, Frijoles negros (454 g / 1 lb) ,2.41,frijoles,2024-12-21 20:08:33
+163,7244, Frijol negro (500 g / 1.10 lb) ,2.4,frijoles,2024-12-21 20:08:33
+164,7229,Frijoles blancos pequeÃ±os Goya (397 g / 14 oz),2.33,frijoles,2024-12-21 20:08:33
+165,7409, Frijoles colorados - porotos rojos - Pantera (454 g / 1 lb) ,2.33,frijoles,2024-12-21 20:08:33
+166,18564,Frijoles negros Marcos (500 g / 1.10 lb),2.28,frijoles,2024-12-21 20:08:33
+167,7218,Frijoles colorados Don JosÃ© (500 g / 1.1 lb),2.23,frijoles,2024-12-21 20:08:33
+168,7247, Frijol mantequilla (454 g / 1 lb) ,2.21,frijoles,2024-12-21 20:08:33
+169,7290, Frijol blanco (500 g / 1.10 lb) ,2.17,frijoles,2024-12-21 20:08:33
+170,7232, Frijol blanco Iberia (340 g / 12 oz) ,2.16,frijoles,2024-12-21 20:08:33
+171,23985,Frijol blanco Iberia (340 g / 12 oz),2.16,frijoles,2024-12-21 20:08:33
+172,7348, Frijoles negros (500 g / 1.1 lb) ,2.13,frijoles,2024-12-21 20:08:33
+173,7191, Frijoles colorados largos Iberia (340 g / 12 oz) ,2.11,frijoles,2024-12-21 20:08:33
+174,23984,Frijoles colorados largos Iberia (340 g / 12 oz),2.11,frijoles,2024-12-21 20:08:33
+175,7367, Alubias negritas - frijoles negros - PuÃ±ado (500 g / 1.1 lb) ,2.05,frijoles,2024-12-21 20:08:33
+176,16461,Frijoles blanco Super Yu (500 g / 1.1 lb),2.05,frijoles,2024-12-21 20:08:33
+177,7287,Alubia chica - Frijol blanco - El Fresno (1 kg / 2.2 lb),1.99,frijoles,2024-12-21 20:08:33
+178,7307, Frijol pinto PuÃ±ado (500 g / 1.1 lb) ,1.99,frijoles,2024-12-21 20:08:33
+179,7306, Frijoles negros PuÃ±ado (500 g / 1.1 lb) ,1.98,frijoles,2024-12-21 20:08:33
+180,7341, Frijoles negros extra Miau (500 g / 1.1 lb) ,1.98,frijoles,2024-12-21 20:08:33
+181,24279,Frijoles Negros Goya (14oz),1.98,frijoles,2024-12-21 20:08:33
+182,43377,Frijoles negros enlatados Goya (439 g / 15.5 oz),1.92,frijoles,2024-12-21 20:08:33
+183,7315, Frijoles negros La Cata (500 g / 1.1 lb) ,1.9,frijoles,2024-12-21 20:08:33
+184,7271, Frijoles negros La Ardosa (500 g / 1.1 lb) ,1.85,frijoles,2024-12-21 20:08:33
+185,7196, Frijoles pintos Iberia (340 g / 12 oz) ,1.82,frijoles,2024-12-21 20:08:33
+186,16463,Frijoles colorados Don JosÃ© (500 g / 1.1 lb),1.75,frijoles,2024-12-21 20:08:33
+187,23982, Frijoles colorados Don JosÃ© (500 g / 1.1 lb) ,1.75,frijoles,2024-12-21 20:08:33
+188,7207, Frijoles negros Iberia (340 g / 12 oz) ,1.74,frijoles,2024-12-21 20:08:33
+189,16945,Frijoles blancos -alubias blancas- La Cata (500 g / 1.1 lb),1.74,frijoles,2024-12-21 20:08:33
+190,24534,Frijol negro deCancio Foods (500g),1.74,frijoles,2024-12-21 20:08:33
+191,853, Frijoles negros enlatados Goya (439 g / 15.5 oz) ,1.7,frijoles,2024-12-21 20:08:33
+192,853, Frijoles negros enlatados Goya (439 g / 15.5 oz) ,1.7,frijoles,2024-12-21 20:08:33
+193,61323, Frijoles negros enlatados Goya (439 g / 15.5 oz) ,1.7,frijoles,2024-12-21 20:08:33
+194,7186, Frijoles blancos -porotos alubias- Don JosÃ© (500 g / 1.1 lb) ,1.68,frijoles,2024-12-21 20:08:33
+195,15700, Frijoles rojos Vima Foods (410 g / 14.5 oz) ,1.68,frijoles,2024-12-21 20:08:33
+196,7195, Frijoles colorados cortos Iberia (340 g / 12 oz) ,1.64,frijoles,2024-12-21 20:08:33
+197,15691, Frijoles pintos Vima Foods (410 g / 14.5 oz) ,1.64,frijoles,2024-12-21 20:08:33
+198,7304, Frijol negro Pantera (454 g / 1 lb) ,1.62,frijoles,2024-12-21 20:08:33
+199,3601,Arroz blanco de grano largo (4.54 kg / 10 lb),11.27,arroz,2024-12-21 20:08:33
+200,3602,Arroz blanco de grano largo (2.27 kg / 5 lb),5.64,arroz,2024-12-21 20:08:33
+201,3603,Arroz blanco tailandés Radhika Rice (5 kg / 11 lb),10.35,arroz,2024-12-21 20:08:33
+202,3604,Arroz blanco tailandés Jasmine Rice (5 kg / 11 lb),13.17,arroz,2024-12-21 20:08:33
+203,3606,Arroz Jasmine grano largo Iberia (907 g / 2 lb),3.58,arroz,2024-12-21 20:08:33
+204,3610,Arroz blanco tailandés Jasmine Rice (1 kg / 2.2 lb),2.69,arroz,2024-12-21 20:08:33
+205,3611,Arroz blanco de grano largo Yeya (10 kg / 22 lb),22.73,arroz,2024-12-21 20:08:33
+206,3612,Arroz blanco Jasmine Rice (5 kg / 11 lb),11.3,arroz,2024-12-21 20:08:33
+207,3618,Arroz criollo (2 kg / 4.4 lb),5.59,arroz,2024-12-21 20:08:33
+208,3622,Arroz blanco brasileño tipo 1 (5 kg / 11.02 lb),13.7,arroz,2024-12-21 20:08:33
+209,3623,Arroz grano largo delgado Grado 2 Los Granos (1 kg / 2.2 lb),3.49,arroz,2024-12-21 20:08:33
+210,3626,Arroz de grano largo (4.08 kg / 9 lb),11.4,arroz,2024-12-21 20:08:33
+211,3627,Arroz de grano largo (5 kg / 11.02 lb),13.97,arroz,2024-12-21 20:08:33
+212,3628,Arroz de grano largo (5.89 kg / 13 lb),16.47,arroz,2024-12-21 20:08:33
+213,3631,Arroz blanco brasileño Rainha (1 kg / 2.2 lb),2.45,arroz,2024-12-21 20:08:33
+214,3640,Arroz de grano largo (2.26 kg / 5 lb),6.32,arroz,2024-12-21 20:08:33
+215,3642,Arroz criollo (3 kg / 6.6 lb),8.38,arroz,2024-12-21 20:08:33
+216,3643,Arroz criollo (4 kg / 8.8 lb),11.18,arroz,2024-12-21 20:08:33
+217,3644,Arroz criollo (3.17 kg / 7 lb),8.82,arroz,2024-12-21 20:08:33
+218,3645,Arroz de grano largo (1.81 kg / 4 lb),5.07,arroz,2024-12-21 20:08:33
+219,3646,Arroz blanco (2.27 kg / 5 lb),7.88,arroz,2024-12-21 20:08:33
+220,3647,Arroz de grano largo (5.44 kg / 12 lb),15.22,arroz,2024-12-21 20:08:33
+221,3653,Arroz de grano largo (2.26 kg / 5 lb),6.3,arroz,2024-12-21 20:08:33
+222,3657,Arroz de grano extra largo Canilla (1.36 kg / 3 lb),3.98,arroz,2024-12-21 20:08:33
+223,3661,Arroz criollo (3.62 kg / 8 lb),10.15,arroz,2024-12-21 20:08:33
+224,3662,Arroz criollo (4.08 kg / 9 lb),11.4,arroz,2024-12-21 20:08:33
+225,3663,Arroz de grano largo (2 kg / 4.4 lb),5.59,arroz,2024-12-21 20:08:33
+226,3664,Arroz de grano largo (4 kg / 8.8 lb),11.18,arroz,2024-12-21 20:08:33
+227,3665,Arroz de grano largo (4.98 kg / 11 lb),13.9,arroz,2024-12-21 20:08:33
+228,3666,Arroz de grano largo (6 kg / 13.2 lb),16.76,arroz,2024-12-21 20:08:33
+229,3667,Arroz de grano largo (453.5 g / 1 lb),1.32,arroz,2024-12-21 20:08:33
+230,3668,Arroz blanco grano largo Disempre (1 Kg / 2.2 lb),2.19,arroz,2024-12-21 20:08:33
+231,3672,Arroz criollo (1 kg / 2.2 lb),2.79,arroz,2024-12-21 20:08:33
+232,3675,Arroz grano largo Disempre (1 kg / 2.2 lb),2.36,arroz,2024-12-21 20:08:33
+233,3678,Arroz de grano largo (4.53 kg / 10 lb),12.72,arroz,2024-12-21 20:08:33
+234,3680,Arroz criollo (5 kg / 11.02 lb),13.97,arroz,2024-12-21 20:08:33
+235,3682,Arroz criollo (2.72 kg / 6 lb),7.57,arroz,2024-12-21 20:08:33
+236,3683,Arroz criollo (4.98 kg / 11 lb),13.9,arroz,2024-12-21 20:08:33
+237,3684,Arroz de grano largo (2.72 kg / 6 lb),7.57,arroz,2024-12-21 20:08:33
+238,3685,Arroz de grano largo (3 kg / 6.6 lb),8.38,arroz,2024-12-21 20:08:33
+239,3687,Arroz largo categoría extra (1 kg / 2.2 lb),3.37,arroz,2024-12-21 20:08:33
+240,3691,Arroz de grano largo (1.36 kg / 3 lb),3.82,arroz,2024-12-21 20:08:33
+241,3694,Arroz de grano largo (1.3 kg / 3 lb),3.35,arroz,2024-12-21 20:08:33
+242,3698,Arroz criollo (6 kg / 13.2 lb),16.76,arroz,2024-12-21 20:08:33
+243,3699,Arroz criollo (5.44 kg / 12 lb),15.22,arroz,2024-12-21 20:08:33
+244,3700,Arroz criollo (5.89 kg / 13 lb),16.47,arroz,2024-12-21 20:08:33
+245,3701,Arroz de grano largo (1 kg / 2.2 lb),2.79,arroz,2024-12-21 20:08:33
+246,3702,Arroz de grano largo (3.62 kg / 8 lb),10.15,arroz,2024-12-21 20:08:33
+247,3703,Arroz de grano largo (907 g / 2 lb),2.57,arroz,2024-12-21 20:08:33
+248,3704,Arroz redondo Santo Tomás (1 kg / 2.2 lb),3.26,arroz,2024-12-21 20:08:33
+249,10004,Arroz blanco tailandes Radhika (25 kg / 55.11 lb),54.89,arroz,2024-12-21 20:08:33
+250,16408,Arroz grano largo Disempre (5 kg / 11 lb),11.72,arroz,2024-12-21 20:08:33
+251,16410,Arroz de grano largo (4.53 kg / 10 lb),12.6,arroz,2024-12-21 20:08:33
+252,17399,Arroz blanco de grano largo (2.27 kg / 5 lb),5.47,arroz,2024-12-21 20:08:33
+253,18019,Arroz de grano largo (1.81 kg / 4 lb),5.04,arroz,2024-12-21 20:08:33
+254,18496,Arroz blanco de grano largo (1 kg / 2.2 lb),2.5,arroz,2024-12-21 20:08:33
+255,19178,Arroz de grano largo (1.36 kg / 3 lb),4.64,arroz,2024-12-21 20:08:33
+256,20314,Arroz grano extra (1 kg / 2.2 lb),3.49,arroz,2024-12-21 20:08:33
+257,20943,Arroz grano largo Disempre (5 kg / 11 lb),12.01,arroz,2024-12-21 20:08:33
+258,22055,Arroz super extra Onís (1 kg / 2.2 lb),2.37,arroz,2024-12-21 20:08:33
+259,22403,Arroz super extra El Fresno (1 kg / 2.2 lb),2.48,arroz,2024-12-21 20:08:33
+260,23005,Arroz criollo (1 kg / 2.2 lb),3.27,arroz,2024-12-21 20:08:33
+261,23969,Arroz jasmine grano largo Iberia ( 907 g / 2 lb),3.57,arroz,2024-12-21 20:08:33
+262,24217,Arroz criollo (4 lb / 1.85 kg),8.0,arroz,2024-12-21 20:08:33
+263,24399,Arroz 15 lbs ,43.45,arroz,2024-12-21 20:08:33
+264,24541,Arroz de Grano Largo Rico Prato (1kg),2.32,arroz,2024-12-21 20:08:33
+265,24542,Arroz importado (4 lb / 1.85 kg),12.0,arroz,2024-12-21 20:08:33
+266,24604,Arroz 1 lb,2.95,arroz,2024-12-21 20:08:33
+267,24646,Arroz congrís Abuela´s Gourmet Kitchen (3lb),6.5,otros,2024-12-21 20:08:33
+268,24900,Arroz Largo Fino Rico Prato (1 kg / 2.2 lb),2.6,arroz,2024-12-21 20:08:33
+269,24964,Arroz Criollo Ruano (500g),1.11,arroz,2024-12-21 20:08:33
+270,25145,Arroz Criollo 5 kg,20.56,arroz,2024-12-21 20:08:33
+271,25146,Arroz Criollo 10 kg,38.7,arroz,2024-12-21 20:08:33
+272,25218,Arroz 15 lbs,48.66,arroz,2024-12-21 20:08:33
+273,25286,Arroz 1 lb,3.3,arroz,2024-12-21 20:08:33
+274,25391,Arroz criollo (lb),2.0,arroz,2024-12-21 20:08:33
+275,25442,Arroz (1 Kg / 2.2 Lb),4.8,arroz,2024-12-21 20:08:33
+276,25443,Arroz (5 Lb),10.04,arroz,2024-12-21 20:08:33
+277,25624,Arroz Blanco de grano largo (1kg),1.85,arroz,2024-12-21 20:08:33
+278,25631,Arroz (10 Lb),18.76,arroz,2024-12-21 20:08:33
+279,25936,ARROZ 1KG- AGRESTE,3.95,arroz,2024-12-21 20:08:33
+280,26433,Arroz Blanco,0.69,arroz,2024-12-21 20:08:33
+281,29089,Arroz Brasileño (1Kilogramo),4.0,arroz,2024-12-21 20:08:33
+282,29266,Arroz Criollo Ruano (500g),1.11,arroz,2024-12-21 20:08:33
+283,29324,Arroz blanco (5 Lb),10.04,arroz,2024-12-21 20:08:33
+284,29722,Arroz blanco (10 Lb),23.97,arroz,2024-12-21 20:08:33
+285,29892,Arroz italiano Scotti (2.2 lb),8.0,arroz,2024-12-21 20:08:33
+286,30105,Arroz importado (10 Lb),27.51,arroz,2024-12-21 20:08:33
+287,30112,Arroz SuperExtra San Diego (1 Kg),3.13,arroz,2024-12-21 20:08:33
+288,30646,"Arroz criollo, 2.3 Kg (Ruano)",5.28,arroz,2024-12-21 20:08:33
+289,30893,"Arroz criollo, 500 g (Ruano)",1.24,arroz,2024-12-21 20:08:33
+290,31477,"Arroz criollo, 1 kg ¨Multisell¨",2.03,arroz,2024-12-21 20:08:33
+291,31926,"Arroz grano largo, Pelícano, 1 kg",2.55,arroz,2024-12-21 20:08:33
+292,32201,"Arroz criollo, 1 kg ¨Porcien¨",1.88,arroz,2024-12-21 20:08:33
+293,32809,"Arroz brasileño ""Rampinelli"", 5 kg",9.04,arroz,2024-12-21 20:08:33
+294,32839,"Arroz enriquecido, ""Alberto"", 5 lb",3.8,arroz,2024-12-21 20:08:33
+295,33199,"Arroz blanco Premium brasileño, 5 kg",9.06,arroz,2024-12-21 20:08:33
+296,33760,"Arroz super extra ""Pionera"", 1kg",1.76,arroz,2024-12-21 20:08:33
+297,34808,"Arroz La Merced, 1 kg",2.89,arroz,2024-12-21 20:08:33
+298,34862,"Arroz super extra ""Pionera"" 5% de quebrado 1kg",1.69,arroz,2024-12-21 20:08:33
+299,35153,Arroz criollo (2.26 kg / 5 lb),10.24,arroz,2024-12-21 20:08:33
+300,35415,Arroz (Paquete de 5 Lb),12.57,arroz,2024-12-21 20:08:33
+301,35972,Arroz de grano largo (1Kg ),3.31,arroz,2024-12-21 20:08:33
+302,35973,Arroz de grano largo ( 3 Lb ),3.94,arroz,2024-12-21 20:08:33
+303,35974,Arroz de grano largo ( 5 Lb ),6.56,arroz,2024-12-21 20:08:33
+304,35975,Arroz de grano largo ( 10 Lb ),13.13,arroz,2024-12-21 20:08:33
+305,36336,Arroz blanco tailandés Radhika Rice (5 kg / 11 lb),12.44,arroz,2024-12-21 20:08:33
+306,37881,Arroz de Grano Largo Disempre (1 kg / 2.2 lb),2.6,arroz,2024-12-21 20:08:33
+307,37945,Arroz (5 lbs),12.95,arroz,2024-12-21 20:08:33
+308,38213,Arroz blanco tailandés (1 kg / 2.2 lb),2.6,arroz,2024-12-21 20:08:33
+309,38214,Arroz blanco tailandés (5 kg / 11 lb),12.8,arroz,2024-12-21 20:08:33
+310,38242,Arroz blanco tailandés Radhika Rice (5 kg / 11 lb),12.44,arroz,2024-12-21 20:08:33
+311,38503,Arroz blanco tailandes Radhika (25 kg / 55.11 lb),65.94,arroz,2024-12-21 20:08:33
+312,38784,Arroz extra largo Canilla (2.27 kg / 5 lb),8.2,arroz,2024-12-21 20:08:33
+313,39379,Arroz extra largo canilla Goya (2.27 kg / 5 lb),7.86,arroz,2024-12-21 20:08:33
+314,39799,Arroz jasmine grano largo Iberia ( 907 g / 2 lb),4.29,arroz,2024-12-21 20:08:33
+315,40068,Arroz blanco tailandés Jasmine Rice (1 kg / 2.2 lb),2.6,arroz,2024-12-21 20:08:33
+316,40411,Arroz de grano largo (1 kg / 2.2 lb),3.15,arroz,2024-12-21 20:08:33
+317,40609,Arroz criollo (1 kg / 2.2 lb),4.78,arroz,2024-12-21 20:08:33
+318,40701,Arroz grano largo (907 g / 2 lb),3.0,arroz,2024-12-21 20:08:33
+319,40752,Arroz grano largo (2.26 kg / 5 lb),8.19,arroz,2024-12-21 20:08:33
+320,41005,Arroz largo ADB Premium (1 kg / 2.2 lb),2.25,arroz,2024-12-21 20:08:33
+321,41143,Arroz grano largo fino grado 2 Coliseo (1 kg / 2.2 lb),4.17,arroz,2024-12-21 20:08:33
+322,41468,Arroz largo Bonarroz (1 kg / 2.2 lb),3.94,arroz,2024-12-21 20:08:33
+323,41548,Arroz redondo Santo Tomás (1 kg / 2.2 lb),3.25,arroz,2024-12-21 20:08:33
+324,42433,Arroz grano largo (6.8 kg / 14.9 lb),24.57,arroz,2024-12-21 20:08:33
+325,42710,Arroz largo fino Rico Prato (1 kg / 2.2 lb),2.26,arroz,2024-12-21 20:08:33
+326,42741,Arroz de grano largo (4.54 kg / 10 lb),12.28,arroz,2024-12-21 20:08:33
+327,44046,Arroz redondo extra (1 kg / 2.20 lb),4.17,arroz,2024-12-21 20:08:33
+328,44286,Arroz súper extra San Diego (1 kg / 2.2 lb),2.7,arroz,2024-12-21 20:08:33
+329,44357,Arroz de grano largo (2.27 kg / 5 lb),6.14,arroz,2024-12-21 20:08:33
+330,44400,Arroz grano largo Disempre (1 kg / 2.2 lb),2.16,arroz,2024-12-21 20:08:33
+331,44574,Arroz de grano largo (2.27 kg / 5 lb),7.16,arroz,2024-12-21 20:08:33
+332,44995,Arroz vaporizado Dacsa (1 kg / 2.2 lb),3.38,arroz,2024-12-21 20:08:33
+333,45152,Arroz largo MIAU (1 kg / 2.2 lb),4.64,arroz,2024-12-21 20:08:33
+334,46544,Arroz blanco tailandes Radhika (25 kg / 55.11 lb),65.94,arroz,2024-12-21 20:08:33
+335,47019,Arroz grano largo (2.26 kg / 5 lb),7.51,arroz,2024-12-21 20:08:33
+336,47073,Arroz criollo (2.26 kg / 5 lb),11.6,arroz,2024-12-21 20:08:33
+337,47104,Arroz largo Gourmet (1 kg / 2.2 lb),3.38,arroz,2024-12-21 20:08:33
+338,47406,Arroz grano largo (4.54 kg / 10 lb),16.38,arroz,2024-12-21 20:08:33
+339,47975,Arroz largo (4.53 kg / 10 lb),16.38,arroz,2024-12-21 20:08:33
+340,48965,Arroz de Grano Largo Rico Prato (1kg),2.32,arroz,2024-12-21 20:08:33
+341,49202,"Arroz Criollo, 1 kg ¨Ruano¨",2.54,arroz,2024-12-21 20:08:33
+342,49763,Arroz blanco largo Yeya (10 kg / 22.05 lb),28.94,arroz,2024-12-21 20:08:33
+343,49939,Arroz blanco largo Yeya (1 kg / 2.2 lb),3.15,arroz,2024-12-21 20:08:33
+344,50003,Arroz criollo (2.27 kg / 5 lb),5.88,arroz,2024-12-21 20:08:33
+345,50133,Arroz de grano largo (1.36 kg / 3 lb),4.3,arroz,2024-12-21 20:08:33
+346,50204,Arroz jasmine grano largo Iberia ( 2.27 kg / 5 lb),10.69,arroz,2024-12-21 20:08:33
+347,50433,Arroz (25 kg / 55.11 lb),64.16,arroz,2024-12-21 20:08:33
+348,50436,Arroz criollo (453.5 g / 1 lb),1.22,arroz,2024-12-21 20:08:33
+349,50672,Arroz blanco redondo Miau (1 kg / 2.2 lb),4.39,arroz,2024-12-21 20:08:33
+350,51013,Arroz criollo (4.54 kg / 10 lb),11.8,arroz,2024-12-21 20:08:33
+351,51165,Arroz de grano largo (4.54 Kg / 10 lb),14.33,arroz,2024-12-21 20:08:33
+352,51472,Arroz super extra El Fresno (1 kg / 2.2 lb),4.26,arroz,2024-12-21 20:08:33
+353,51544,Arroz blanco grano largo La Doña (25 kg / 55.11 lb),51.19,arroz,2024-12-21 20:08:33
+354,51717,Arroz largo (1 kg / 2.2 lb),3.95,arroz,2024-12-21 20:08:33
+355,51772,Arroz criollo (1 kg / 2.2 lb),4.03,arroz,2024-12-21 20:08:33
+356,51995,Arroz super extra Onis (1 kg / 2.2 lb),2.41,arroz,2024-12-21 20:08:33
+357,52294,Arroz criollo (4.54 kg / 10 lb),14.42,arroz,2024-12-21 20:08:33
+358,52429,Arroz criollo de alta calidad (2.26 kg / 5 lb),8.19,arroz,2024-12-21 20:08:33
+359,53202,Arroz Jasmine grano largo Iberia (907 g / 2 lb),4.3,arroz,2024-12-21 20:08:33
+360,53834,Arroz criollo (2 kg / 4.4 lb),9.55,arroz,2024-12-21 20:08:33
+361,54293,Arroz grano largo (907 g / 2 lb),3.28,arroz,2024-12-21 20:08:33
+362,54321,Arroz grano largo Disempre (1 kg / 2.2 lb),2.31,arroz,2024-12-21 20:08:33
+363,54418,Arroz criollo (1.36 kg / 3 lb),3.55,arroz,2024-12-21 20:08:33
+364,54538,Arroz de grano largo Dacsa (5 kg / 11.02 lb),19.66,arroz,2024-12-21 20:08:33
+365,54642,Arroz grano largo (1 kg / 2.2 lb),3.28,arroz,2024-12-21 20:08:33
+366,54824,Arroz criollo (2 kg / 4.4 lb),6.14,arroz,2024-12-21 20:08:33
+367,54858,Arroz criollo (1.81 kg / 4 lb),4.71,arroz,2024-12-21 20:08:33
+368,54859,Arroz grano largo Disempre (5 kg / 11 lb),12.01,arroz,2024-12-21 20:08:33
+369,54890,Arroz criollo (907 g / 2 lb),2.39,arroz,2024-12-21 20:08:33
+370,55313,Arroz blanco (2.26 kg / 5 lb),9.55,arroz,2024-12-21 20:08:33
+371,55359,Arroz redondo Santo Tomás (1 kg / 2.2 lb),4.68,arroz,2024-12-21 20:08:33
+372,55930,Arroz criollo (4.53 kg / 10 lb),12.56,arroz,2024-12-21 20:08:33
+373,55975,Arroz de Grano Largo deCancio Foods (1kg),1.86,arroz,2024-12-21 20:08:33
+374,56455,Arroz con leche Macro Food (1 kg / 2.2 lb),7.92,otros,2024-12-21 20:08:33
+375,56973,Arroz largo ADB Premium (5 kg / 11 lb),10.92,arroz,2024-12-21 20:08:33
+376,57324,Arroz largo fino (1 kg / 2.2 lb),2.26,arroz,2024-12-21 20:08:33
+377,57359,Arroz super extra Onís (1 kg / 2.2 lb),2.43,arroz,2024-12-21 20:08:33
+378,57522,Arroz blanco de grano largo (22.6 kg / 50 lb),61.43,arroz,2024-12-21 20:08:33
+379,57809,Arroz Criollo (2.27 kg / 5 lb),6.97,arroz,2024-12-21 20:08:33
+380,58534,Arroz criollo (3.63 kg / 8 lb),10.82,arroz,2024-12-21 20:08:33
+381,58535,Arroz criollo (2.26 kg / 5 lb),7.51,arroz,2024-12-21 20:08:33
+382,58538,Arroz blanco Amanhecer (1 kg / 2.2 lb),3.35,arroz,2024-12-21 20:08:33
+383,58555,Arroz criollo (2.26 kg / 5 lb),9.66,arroz,2024-12-21 20:08:33
+384,58768,Arroz largo Miau (1 kg / 2.2 lb),3.82,arroz,2024-12-21 20:08:33
+385,59126,Arroz grano largo (1.36 kg / 3 lb),4.5,arroz,2024-12-21 20:08:33
+386,59342,Arroz blanco brasileño Rainha (1 kg / 2.2 lb),3.41,arroz,2024-12-21 20:08:33
+387,59942,Arroz criollo (2.27 kg / 5 lb),8.84,arroz,2024-12-21 20:08:33
+388,60075,Arroz blanco de grano largo (1 kg / 2.2 lb),2.92,arroz,2024-12-21 20:08:33
+389,61926,Arroz largo Dino food (1 kg / 2.2 lb),3.77,arroz,2024-12-21 20:08:33
+390,62056,Arroz WESTERN FOODS grano largo (50lb/23kg),50.0,arroz,2024-12-21 20:08:33
+391,62564,Arroz criollo (2.26 kg / 5 lb),8.19,arroz,2024-12-21 20:08:33
+392,63950,Arroz de grano largo Pelicano (1 kg / 2.2 lb),2.82,arroz,2024-12-21 20:08:33
+393,64635,Arroz blanco de grano largo (906 g/ 2 lb),4.09,arroz,2024-12-21 20:08:33
+394,64984,Arroz súper extra San Diego (1 kg / 2.2 lb),2.95,arroz,2024-12-21 20:08:33
+395,65711,Arroz blanco (907 g / 2 lb),3.82,arroz,2024-12-21 20:08:33
+396,65775,Arroz criollo (4.53 kg / 10 lb),10.83,arroz,2024-12-21 20:08:33
+397,66249,Arroz de grano largo (2.26 kg / 5 lb),6.28,arroz,2024-12-21 20:08:33
+398,66754,Arroz blanco tailandés Jasmine Rice (1 kg / 2.2 lb),4.1,arroz,2024-12-21 20:08:33
+399,66925,Arroz blanco (2.27 kg / 5 lb),6.82,arroz,2024-12-21 20:08:33
+400,67409,Arroz blanco largo Miau (1 kg / 2.2 lb),3.95,arroz,2024-12-21 20:08:33
+401,67900,Arroz blanco redondo Miau (1 kg / 2.2 lb),4.52,arroz,2024-12-21 20:08:33
+402,16943,Frijoles negros (454 g / 1 lb),1.58,frijoles,2024-12-21 20:08:33
+403,19116, Frijoles de ojo negro Tom Food (425 g / 15 oz) ,1.57,frijoles,2024-12-21 20:08:33
+404,19117, Frijoles colorados Tom Food (425 g / 15 oz) ,1.57,frijoles,2024-12-21 20:08:33
+405,19118, Frijoles negros Tom Food (425 g / 15 oz) ,1.57,frijoles,2024-12-21 20:08:33
+406,19120, Frijoles blancos Tom Food (425 g / 15 oz) ,1.57,frijoles,2024-12-21 20:08:33
+407,862, Frijoles negros Vima Foods (410 g / 14.5 oz) ,1.37,frijoles,2024-12-21 20:08:33
+408,24933,Frijoles Negros Enlatados Tom Food (425g),1.3,frijoles,2024-12-21 20:08:33
+409,24933,Frijoles Negros Enlatados Tom Food (425g),1.3,frijoles,2024-12-21 20:08:33
+410,48957,Frijoles Negros Enlatados Tom Food (425g),1.3,frijoles,2024-12-21 20:08:33
+411,25120,Frijoles Negros Goya (15.5oz),0.0,frijoles,2024-12-21 20:08:33
+412,41929,Azúcar refino (2.27 kg / 5 lb),13.65,azúcar,2024-12-21 20:08:33
+413,43092,Azúcar blanca Marianela (1 kg / 2.2 lb),2.94,azúcar,2024-12-21 20:08:33
+414,43616,Azúcar blanca Patéko (1 kg / 2.2 lb),2.95,azúcar,2024-12-21 20:08:33
+415,73932,Azúcar blanca refinada Energy (1 kg / 2.2 lb),4.0,azúcar,2024-12-21 20:08:33
+416,45849,Azúcar blanca (4.54 kg / 10 lb),27.3,azúcar,2024-12-21 20:08:33
+417,71818,Azúcar blanca Energy ( 1 kg / 2.2 lb ),4.78,azúcar,2024-12-21 20:08:33
+418,48700,Azúcar blanca granulada San Isidro (1 kg / 2.2 lb),4.66,azúcar,2024-12-21 20:08:33
+419,9374, Azúcar blanca (454 g/ 1 lb) ,2.74,azúcar,2024-12-21 20:08:33
+420,46189, Azúcar blanca refinado Energy (1 kg / 2.2 lb) ,2.47,azúcar,2024-12-21 20:08:33
+421,9361, Azúcar blanca (2.27 kg / 5 lb) ,13.7,azúcar,2024-12-21 20:08:33
+422,54445,Azúcar blanca (5 kg / 11 lb),13.65,azúcar,2024-12-21 20:08:33
+423,76641,Azúcar blanca Granulada (1.81 kg/ 4 lb),20.48,azúcar,2024-12-21 20:08:33
+424,76651,Azúcar Blanca  (1 kg),6.25,azúcar,2024-12-21 20:08:33
+425,76652,Azúcar Morena 1kg,6.25,azúcar,2024-12-21 20:08:33
+426,50485,Azúcar blanca (1 kg / 2.2 lb),2.38,azúcar,2024-12-21 20:08:33
+427,55337,Azúcar refino (1.36 kg / 3 lb),8.19,azúcar,2024-12-21 20:08:33
+428,25227,Azúcar 15 lbs,42.56,azúcar,2024-12-21 20:08:33
+429,30756,"Azúcar blanca cristal, 1 kg",2.09,azúcar,2024-12-21 20:08:33
+430,77433,Azúcar Blanca Granulada Extra Fina (1.81 kg/ 4 lb),20.48,azúcar,2024-12-21 20:08:33
+431,64644,Azúcar blanca refinada Energy (5 kg / 11 lb),15.07,azúcar,2024-12-21 20:08:33
+432,9335, Azúcar blanca Silver Foods (1 kg / 2.2 lb) ,2.52,azúcar,2024-12-21 20:08:33
+433,50412,Azúcar parda (4.54 kg / 10 lb),20.48,azúcar,2024-12-21 20:08:33
+434,25394,Azúcar blanca (1kg),6.25,azúcar,2024-12-21 20:08:33
+435,20633, Azúcar parda (1 kg / 2.2 lb) ,5.42,azúcar,2024-12-21 20:08:33
+436,40620,Azúcar blanca (6.8 kg / 14.9 lb),20.48,azúcar,2024-12-21 20:08:33
+437,50115,Azúcar blanca (2.26 kg / 5 lb),6.21,azúcar,2024-12-21 20:08:33
+438,55873,Azúcar cristal Colombo (50 kg / 110 lb),118.22,azúcar,2024-12-21 20:08:33
+439,9482, Azúcar blanca (1.36 kg / 3 lb) ,8.22,azúcar,2024-12-21 20:08:33
+440,70414, Azúcar blanca (1.36 kg / 3 lb) ,8.22,azúcar,2024-12-21 20:08:33
+441,70413, Azúcar blanca (4.54 kg / 10 lb) ,27.4,azúcar,2024-12-21 20:08:33
+442,54698,Azúcar blanca (2.72 kg / 6 lb),7.44,azúcar,2024-12-21 20:08:33
+443,70415, Azúcar blanca Crystal (1.81 kg / 4 lb) ,12.33,azúcar,2024-12-21 20:08:33
+444,63945,Azúcar blanca refinada (1 kg / 2.2 lb),3.0,azúcar,2024-12-21 20:08:33
+445,73440, Azúcar blanca Cristal (1.81 kg/ 4 lb) ,19.18,azúcar,2024-12-21 20:08:33
+446,9491, Azúcar blanca (1 kg / 2.2 lb) ,3.97,azúcar,2024-12-21 20:08:33
+447,9443, Azúcar blanca granulada (1 kg / 2.2 lb) ,6.4,azúcar,2024-12-21 20:08:33
+448,53028,Azúcar turbinada La Montaña 1 Lb,1.12,azúcar,2024-12-21 20:08:33
+449,44818,Azúcar blanca (450 g / 1 lb),1.22,azúcar,2024-12-21 20:08:33
+450,58388,Azúcar refinada (1 kg / 2.2 lb),4.64,azúcar,2024-12-21 20:08:33
+451,65321,Azúcar blanca refinada Maisdoce (1 kg / 2.20 lb),3.3,azúcar,2024-12-21 20:08:33
+452,30091,Azúcar Moreno o parda (10 Lb),26.03,azúcar,2024-12-21 20:08:33
+453,24897,Azúcar Blanca (3kg),5.72,azúcar,2024-12-21 20:08:33
+454,51773,Azúcar blanca Azucarera (1 kg / 2.2 lb),4.52,azúcar,2024-12-21 20:08:33

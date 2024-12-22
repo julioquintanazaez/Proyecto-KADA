@@ -41,7 +41,7 @@ def db_start():
         'password': password
     }
     return db_config
-
+ 
 
 def train_model_with_file(file):    
 
