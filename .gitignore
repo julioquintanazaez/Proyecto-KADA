@@ -5,6 +5,7 @@ kadaenv/
 # Files
 *.xlsx
 *.csv
+*.pdf
 
 # Environments
 .env
