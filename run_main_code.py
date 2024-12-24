@@ -34,13 +34,13 @@ df_predictions = clf_voting.predict_tags(df_test)
  
 
 #df_predictions['tag_updated_at'] = pd.to_datetime(df_predictions['tag_updated_at'])
-#df_predictions.to_csv('products_predictions_test.csv', index=False)
+df_predictions.to_csv('products_predictions_test.csv', index=False)
 
-df_new = pd.read_excel('otros.xlsx')
-clf_voting.retrain_model(df_new)
+#df_new = pd.read_excel('otros.xlsx')
+#clf_voting.retrain_model(df_new)
 
 
- """       
+"""       
     
 # Supongamos que tienes un DataFrame de prueba para hacer predicciones
 conector = DatabaseConnector(read_root())

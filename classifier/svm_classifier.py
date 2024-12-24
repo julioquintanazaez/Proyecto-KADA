@@ -15,7 +15,7 @@ import pytz
 class SVM_ProductClassifier:
     def __init__(self, excel_file):
         self.df_train = pd.read_excel(excel_file)
-        self.vectorizer = CustomTfidfVectorizer(strip_accents='unicode')
+        self.vectorizer = self.load_latest_vectorizer() 
         self.text_processor = TextProcessor()
         self.combo_classifier = ComboClassifier()
         self.model = self.load_latest_model()
@@ -28,6 +28,17 @@ class SVM_ProductClassifier:
         model_files.sort(key=lambda x: os.path.getmtime(os.path.join(model_folder, x)))
         print(model_files[-1])
         return joblib.load(os.path.join(model_folder, model_files[-1]))
+    
+    def load_latest_vectorizer(self):
+        vectorizer_folder = os.path.join('train_folder', 'train_saves_vectorizer')
+        vectorizer_files = [f for f in os.listdir(vectorizer_folder) if f.endswith('.pkl')]
+        if not vectorizer_files:
+            return CustomTfidfVectorizer(strip_accents='unicode')  # Retornar un nuevo vectorizador si no existe
+        vectorizer_files.sort(key=lambda x: os.path.getmtime(os.path.join(vectorizer_folder, x)))
+        print(vectorizer_files[-1])
+        vectorizer = joblib.load(os.path.join(vectorizer_folder, vectorizer_files[-1]))
+        return vectorizer
+
 
 
     def train_model(self):
@@ -42,6 +53,7 @@ class SVM_ProductClassifier:
             self.model = SVC(probability=True)
             self.model.fit(X_train_tfidf, y_train)
             self.save_model()
+            self.save_vectorizer() 
         else:
             self.model.fit(X_train_tfidf, y_train)
 
@@ -57,6 +69,14 @@ class SVM_ProductClassifier:
         timestamp = current_time_cuba.strftime('%Y%m%d_%H%M%S')
         new_model_filename = os.path.join(model_folder, f'model_svm_{timestamp}.pkl')
         joblib.dump(self.model, new_model_filename)
+    
+    def save_vectorizer(self):
+        cuba_tz = pytz.timezone('America/Havana')
+        current_time_cuba = datetime.now(cuba_tz)
+        timestamp = current_time_cuba.strftime('%Y%m%d_%H%M%S')
+        vectorizer_folder = os.path.join('train_folder', 'train_saves_vectorizer')
+        new_vectorizer_filename = os.path.join(vectorizer_folder, f'vectorizer_{timestamp}.pkl')
+        joblib.dump(self.vectorizer, new_vectorizer_filename)    
 
     def retrain_model(self, new_data):
         model_folder = 'train_folder/train_saves_svm'
