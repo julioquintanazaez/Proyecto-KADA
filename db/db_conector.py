@@ -10,6 +10,11 @@ class DatabaseConnector:
         engine = create_engine(connection_string)
         return engine
 
+    """Este metodo es el que se emplea en la clasificación de las tags.
+    Una cosa, siempre se etiquetan todos los productos o solamente los últimos
+    en agregarse. Pues no veo ninguna restricción sobre si ya existe etiquena no retornar
+    en el dataframe.
+    """
     def data_postgresql(self, table, rows):
         engine = self.connect()
         rows_str = ', '.join(rows)
@@ -45,15 +50,14 @@ class DatabaseConnector:
                             {'id': id_value}
                         ).scalar()
 
-                        print(f"ID: {id_value}, Valor actual: {current_value}, Nuevo valor: {value}")
-
+                        #print(f"ID: {id_value}, Valor actual: {current_value}, Nuevo valor: {value}")
 
                         if current_value != value:
                             connection.execute(
                                 text(f"UPDATE {table} SET {column_name} = :value WHERE id = :id;"),
                                 {'value': value, 'id': id_value}
                             )
-                            print(f"Valor actualizado para id {id_value}: {current_value} -> {value}")
+                            #print(f"Valor actualizado para id {id_value}: {current_value} -> {value}")
                         else:
                             print(f"No se requiere actualización para id {id_value}: el valor ya es {current_value}")
 

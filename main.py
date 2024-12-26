@@ -68,7 +68,7 @@ async def startup_event():
         clf_voting = VPClassifier()
        
         global db_config
-        db_start()        
+        db_config = db_start()        
 
     except Exception as e:
         return HTTPException (status_code=404, detail="Fail database conection...")  
@@ -101,37 +101,31 @@ async def predict_tags():
     current_time_cuba = datetime.now(cuba_tz)
     timestamp = current_time_cuba.strftime('%Y%m%d_%H%M%S')
     
-    if db_config == {}:
+    if db_config != {}:
         # Supongamos que tienes un DataFrame de prueba para hacer predicciones
         try:
-            #conector = DatabaseConnector(db_config)
-            rows_query = ['id', 'name', 'current_price','tag','shop_id','description']
-            #df_test = conector.data_postgresql('product', rows_query)
-            #df_test = conector.data_postgresql('product', rows)
-            #print(df_test)
-
+            conector = DatabaseConnector(db_config)
+            rows_query = ['id', 'name', 'current_price', 'shop_id','description']
+            df_test = conector.data_postgresql('product', rows_query)
             # Make predictions
-            if clf_voting._IS_MODEL_TRAINING:
-
-                df_test = pd.read_excel('juego de datos.xlsx')
-                df_predictions = clf_voting.predict_tags(df_test)
-                df_predictions['tag_updated_at'] = pd.to_datetime(df_predictions['tag_updated_at'], dayfirst=True) #, dayfirst=True
-                df_predictions.to_csv("datos etiquetados.csv")
-
-                # Update database with predictions
-                table_name = 'product'
-                column_name = 'tag'
-                column_name2 = 'tag_updated_at'
-                #conector.update_rowP(df_predictions, table_name, column_name2)        
-            
-                return JSONResponse(status_code=200, content="Tags prediction process successful...")
-            
-            else:
-                return HTTPException (status_code=404, detail="Model untrained...")  
+            #df_test = pd.read_excel('juego de datos.xlsx')
+            df_predictions = clf_voting.predict_tags(df_test)
+            df_predictions['tag_updated_at'] = pd.to_datetime(df_predictions['tag_updated_at'], dayfirst=True) #, dayfirst=True
+            df_predictions.to_csv("datos etiquetados.csv") #Borrar cuando este la validación de etiquetas
+            # Update database with predictions
+            """Revisar esta lógica, me genera dudas, no pueden ser las dos columnas
+            actualizadas a la vez.
+            """
+            table_name = 'product'
+            column_name = 'tag' 
+            column_name2 = 'tag_updated_at'
+            conector.update_rowP(df_predictions, table_name, column_name) 
+            conector.update_rowP(df_predictions, table_name, column_name2)        
+        
+            return JSONResponse(status_code=200, content="Tags prediction process successful...")
         
         except:
             return HTTPException (status_code=404, detail="Fail database conection...")  
-
     else:        
         return HTTPException (status_code=404, detail="Fail database config...")  
 
@@ -140,45 +134,54 @@ async def predict_tags():
 async def retrain_model():
    
     # Se debe leer de la base de datos y crear el dataframe con datos nuevos
-    #conector = DatabaseConnector(read_root())
-    #df_retrain = conector.data_postgresql_filtered_by_date(table_name, rows,column_name,'2024-11-12 19:15:38+00:00')
-    #df_retrain.to_csv('recomendador.csv', index= False)
-    #print(df_retrain)
+    conector = DatabaseConnector(db_config)
+    table_name = 'product'
+    column_name = 'tag'
+    rows_query = ['id', 'name', 'description', 'tag']
 
-    if clf_voting._IS_MODEL_TRAINING:
+    """Que fecha se toma para el reentreno del algoritmo, logicamente no debe ser un valor fijo
+    ahora, es una valor pasado por parámetros, o se detecta automáticamente.
 
-        df_new = pd.read_excel('otros.xlsx')   # Se comenta una vez conectada la db
+    Estuve mirando la lógica de la consulta filtro y escoges los que son distintos de "otros" por lo que
+    deduje que el valor de la variable "column_name" en este caso es "tag".  
+    """
+    df_new = conector.data_postgresql_filtered_by_date(table_name, rows_query, column_name, '2024-11-12')  #2024-11-12 19:15:38+00:00
+    print(df_new.shape)
+    print(df_new.columns)
+    print(df_new.head(5))
+    #df_new = pd.read_excel('otros.xlsx')   # Se comenta una vez conectada la db
+
+    df_new.to_csv('filtered_datos.xlsx')   # Se comenta una vez conectada la db
+    
+    try:
+        print("Entro al try")
         clf_voting.retrain_model(df_new)
+        print("paso la clasificación")
 
         return JSONResponse(status_code=200, content="Retraining successful...")
+    
+    except:
+        return HTTPException (status_code=404, detail="Fail retaining classifier algorithm...")  
 
-    else:
-        return HTTPException (status_code=404, detail="Model untrained...")  
+    
 
 
 @app.get("/get_predictions_matrix", response_model=List[List[int]])  #response_model=List[List[int]]
 async def get_predictions_matrix():
    
-    if clf_voting._IS_MODEL_TRAINING:
-        # Return the confusion matrix
-        cm, tags = clf_voting.get_cm()
-        print(tags)
-        return cm
+    # Return the confusion matrix
+    cm, tags = clf_voting.get_cm()
+    print(tags)
+    return cm
 
-    else:
-        return HTTPException (status_code=404, detail="Model untrained...")  
-    
 
 @app.get("/get_tags", response_model=List[str])  
 async def get_tags():
    
-    if clf_voting._IS_MODEL_TRAINING:
-        # Return the confusion matrix
-        tags = clf_voting.get_tags()
+    # Return the confusion matrix
+    tags = clf_voting.get_tags()
 
-        return tags
+    return tags
     
-    else:
-        return HTTPException (status_code=404, detail="Model untrained...")  
 
   
