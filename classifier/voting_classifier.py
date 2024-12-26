@@ -25,12 +25,9 @@ class Voting_ProductClassifier:
         self.text_processor = TextProcessor()
         self.combo_classifier = ComboClassifier()
         self.confusion_matrix = []
-        self.tags = []
         self.model = self.load_latest_model()
         self.vectorizer = self.load_latest_vectorizer()  # Cargar el vectorizador al iniciar
 
-    def set_tags(self, y_tags):
-        self.tags = np.unique(y_tags)
 
     def load_latest_model(self):
         model_folder = os.path.join('train_folder', 'train_saves_voting')
@@ -57,7 +54,6 @@ class Voting_ProductClassifier:
         self.df_train['process_name'] = self.df_train['name'].apply(self.text_processor.text_process)
         X = self.df_train['process_name']
         y = self.df_train['tag']
-        self.set_tags(y)
         X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
         X_train_tfidf = self.vectorizer.fit_transform(X_train)
         X_val_tfidf = self.vectorizer.transform(X_val)
@@ -106,7 +102,6 @@ class Voting_ProductClassifier:
         df_combined = pd.concat([self.df_train, new_data], ignore_index=True)
         X_combined = df_combined['process_name']
         y_combined = df_combined['tag']
-        self.set_tags(y_combined)
         X_combined_tfidf = self.vectorizer.transform(X_combined)  # Usar el vectorizador cargado
 
         clf1 = MultinomialNB()
@@ -158,9 +153,7 @@ class Voting_ProductClassifier:
 
 
     def get_cm(self):
-        return self.confusion_matrix, self.tags
+        return self.confusion_matrix
 
 
-    def get_tags(self):
-        return self.tags
 

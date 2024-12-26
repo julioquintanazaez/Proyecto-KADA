@@ -163,25 +163,34 @@ async def retrain_model():
     except:
         return HTTPException (status_code=404, detail="Fail retaining classifier algorithm...")  
 
-    
-
 
 @app.get("/get_predictions_matrix", response_model=List[List[int]])  #response_model=List[List[int]]
 async def get_predictions_matrix():
    
     # Return the confusion matrix
-    cm, tags = clf_voting.get_cm()
-    print(tags)
+    cm, _ = clf_voting.get_cm()
+
     return cm
 
 
 @app.get("/get_tags", response_model=List[str])  
 async def get_tags():
    
+    """
+    Las eliminé (podemos pensar otr idea dime que crees) 
+    porque solo las obteniamos en el reentrenameiento, por otro lado la 
+    consulta a la base de datos nos devuelve tambien lo mismo y no demora tanto
+    """
     # Return the confusion matrix
-    tags = clf_voting.get_tags()
+    #tags = clf_voting.get_tags()
 
-    return tags
+    conector = DatabaseConnector(db_config)
+    table_name = 'product'
+    column_query = ['tag']
+
+    return conector.tags_postgresql(table_name, column_query) 
+
+
     
 
   
