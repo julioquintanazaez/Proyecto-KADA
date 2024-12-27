@@ -13,7 +13,9 @@ from classifier.voting_classifier import Voting_ProductClassifier as VPClassifie
 from db.db_conector import DatabaseConnector
 from recomender.recomender import Recomender
 
-from schemas.matrix_response import MatrixResponse, ListResponse
+from vectors.custom_vectorizer import CustomTfidfVectorizer
+
+from schemas.matrix_response import ListResponse
 from typing import List
 
 from dotenv import load_dotenv
@@ -151,7 +153,6 @@ async def retrain_model(date):
     print(df_new.shape)
     print(df_new.columns)
     print(df_new.head(5))
-    #df_new = pd.read_excel('otros.xlsx')   # Se comenta una vez conectada la db
 
     df_new.to_csv('filtered_datos.xlsx')   # Se comenta una vez conectada la db
     
@@ -170,31 +171,19 @@ async def retrain_model(date):
 async def get_predictions_matrix():
    
     # Return the confusion matrix
-    cm, _ = clf_voting.get_cm()
+    cm, cm_tags = clf_voting.get_cm()
 
     return cm
 
 
-@app.get("/get_tags", response_model=List[str])  
-async def get_tags():
-   
-    """
-    Las eliminé (podemos pensar otr idea dime que crees) 
-    porque solo las obteniamos en el reentrenameiento, por otro lado la 
-    consulta a la base de datos nos devuelve tambien lo mismo y no demora tanto
+"""Esto lo puse para testear que estabamos leyendo las prioritywords
+"""
+@app.get("/test_priority_words")  
+async def test_priority_words():
 
-    mira segun yo entendi esto es innecesario lo q se quiere es obtener las etiquetas 
-    de una base de datos local , o sea el archivo json q hay q hacer, revisa el custmo vectorizer
-    """
-    # Return the confusion matrix
-    #tags = clf_voting.get_tags()
+    cvzer = CustomTfidfVectorizer()
 
-    conector = DatabaseConnector(db_config)
-    table_name = 'product'
-    column_query = ['tag']
-
-    return conector.tags_postgresql(table_name, column_query) 
-
+    return cvzer.priority_words
 
     
 

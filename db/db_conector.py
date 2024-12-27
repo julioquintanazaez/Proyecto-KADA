@@ -84,18 +84,4 @@ class DatabaseConnector:
             df = None
         return df
 
-
-    def tags_postgresql(self, table, column):
-        """Método para extraer las etiquetas desde la base de datos
-        """
-        engine = self.connect()
-        rows_str = ', '.join(column)
-        query = f"SELECT {rows_str} FROM {table};"
-        try:
-            df = pd.read_sql_query(query, engine)
-            print("Datos extraídos exitosamente")
-        except Exception as e:
-            print(f"Error al ejecutar la consulta: {e}")
-            df = None
-            
-        return df['tag'].unique()
+  

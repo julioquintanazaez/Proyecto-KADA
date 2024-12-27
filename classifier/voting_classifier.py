@@ -25,6 +25,7 @@ class Voting_ProductClassifier:
         self.text_processor = TextProcessor()
         self.combo_classifier = ComboClassifier()
         self.confusion_matrix = []
+        self.train_tags = []
         self.model = self.load_latest_model()
         self.vectorizer = self.load_latest_vectorizer()  # Cargar el vectorizador al iniciar
 
@@ -76,6 +77,8 @@ class Voting_ProductClassifier:
 
         y_pred = self.model.predict(X_val_tfidf)
         self.confusion_matrix = confusion_matrix(y_val, y_pred)
+        self.train_tags = np.unique(y_pred)  # Útil solo para mostrar la matriz de confusión
+
         print(classification_report(y_val, y_pred))
 
 
@@ -116,6 +119,8 @@ class Voting_ProductClassifier:
         self.model.fit(X_combined_tfidf, y_combined)
         y_pred = self.model.predict(X_combined_tfidf)
         self.confusion_matrix = confusion_matrix(y_combined, y_pred)
+        self.train_tags = np.unique(y_pred)  # Útil solo para mostrar la matriz de confusión
+
         print("Métricas de evaluación del modelo después del reentrenamiento:")
         print(classification_report(y_combined, y_pred))
         self.save_model()
@@ -153,7 +158,7 @@ class Voting_ProductClassifier:
 
 
     def get_cm(self):
-        return self.confusion_matrix
+        return self.confusion_matrix, self.train_tags
 
 
 
