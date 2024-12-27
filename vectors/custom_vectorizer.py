@@ -2,6 +2,9 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 import numpy as np
 
 # Definir las palabras prioritarias y sus pesos
+''' lo  q se quier es este diccionario q esta por aqui convertirlo en una bd de datos en este 
+caso un archivo json y de alli sacar el diccionario y usarlo en el codigo, para no tener q modificar el codigo
+cada vez  q se añada una etiqueta sea solamente añadirlo al archivo json y listo    '''
 priority_words = {
     'cafe': 2.0,
     'huevo': 2.0,

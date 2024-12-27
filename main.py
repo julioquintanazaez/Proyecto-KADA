@@ -131,7 +131,7 @@ async def predict_tags():
 
 
 @app.get("/retrain_model", response_class=JSONResponse)  
-async def retrain_model():
+async def retrain_model(date):
    
     # Se debe leer de la base de datos y crear el dataframe con datos nuevos
     conector = DatabaseConnector(db_config)
@@ -140,12 +140,14 @@ async def retrain_model():
     rows_query = ['id', 'name', 'description', 'tag']
 
     """Que fecha se toma para el reentreno del algoritmo, logicamente no debe ser un valor fijo
-    ahora, es una valor pasado por parámetros, o se detecta automáticamente.
+    ahora, es una valor pasado por parámetros, o se detecta automáticamente. R: por ahora vamos a pasarlo por paramatro
+                                                                            hasta q se automatice el reentreno , seria bueno
+                                                                            tener las 2 cosas uno manual y uno automatico
 
     Estuve mirando la lógica de la consulta filtro y escoges los que son distintos de "otros" por lo que
     deduje que el valor de la variable "column_name" en este caso es "tag".  
     """
-    df_new = conector.data_postgresql_filtered_by_date(table_name, rows_query, column_name, '2024-11-12')  #2024-11-12 19:15:38+00:00
+    df_new = conector.data_postgresql_filtered_by_date(table_name, rows_query, column_name, date)  #2024-11-12 19:15:38+00:00
     print(df_new.shape)
     print(df_new.columns)
     print(df_new.head(5))
@@ -180,6 +182,9 @@ async def get_tags():
     Las eliminé (podemos pensar otr idea dime que crees) 
     porque solo las obteniamos en el reentrenameiento, por otro lado la 
     consulta a la base de datos nos devuelve tambien lo mismo y no demora tanto
+
+    mira segun yo entendi esto es innecesario lo q se quiere es obtener las etiquetas 
+    de una base de datos local , o sea el archivo json q hay q hacer, revisa el custmo vectorizer
     """
     # Return the confusion matrix
     #tags = clf_voting.get_tags()
