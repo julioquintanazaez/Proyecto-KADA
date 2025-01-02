@@ -2,6 +2,7 @@ from  fastapi import FastAPI, HTTPException
 from fastapi.responses import JSONResponse
 from fastapi import File, UploadFile
 from fastapi.responses import HTMLResponse
+from apscheduler.schedulers.background import BackgroundScheduler
 
 import pandas as pd
 import os
@@ -25,6 +26,8 @@ load_dotenv()
 # Empty classifier
 clf_voting = None
 db_config = {}
+
+excel_file = './otros.xlsx'
 
 # Carpeta donde se guardarán los archivos
 UPLOAD_DIRECTORY = "train_folder/train_files"
@@ -70,7 +73,15 @@ async def startup_event():
         clf_voting = VPClassifier()
        
         global db_config
-        db_config = db_start()        
+        db_config = db_start()
+
+        # Crear el programador
+        scheduler = BackgroundScheduler()
+        # Agregar tareas programadas (cada día)
+        scheduler.add_job(classify_empty_tags, 'interval', days=1, id='classify_job', replace_existing=True)
+        scheduler.add_job(retrain_model_with_recent_date, 'interval', days=1, id='retrain_job', replace_existing=True)
+        # Iniciar el programador
+        scheduler.start()
 
     except Exception as e:
         return HTTPException (status_code=404, detail="Fail database conection...")  
@@ -184,6 +195,67 @@ async def test_priority_words():
     cvzer = CustomTfidfVectorizer()
 
     return cvzer.priority_words
+
+'''Estas son las tareas programadas para la clasificacion y el reentreno con la libreria apscheduler puedes testearlas en el runmain
+realmente esto son tareas programadas no se q tan necesario sea crear un endpoint para hacer esto asi q bueno por ahora no lo cree
+porque la idea es q esto se este ejecutando todo el tiempo en ejecucion despues tu dime q te parece, otra cosa no se si llegaste a
+ejecutar el reentrenamiento con la logica de abrir desde un json, me devuelve un error tal q no esta inicializada el atributo q inicializas
+y entonces da error en qnto puedas revisa eso por ahora lo puse a funcionar con los temporales
+
+otra cosa para hacer automatizar el reentreno cree 2 consultas nuevas en la bd una para sacar las los productos con los tags vacios,
+y otra para sacar la fecha mas reciente de clasificacion
+
+Para q no clasifique lo mismo una y otra vez simplemente uso la consulta con tag vacios , en el caso del reentreno creo un log con el 
+entrenamiento, despues quiero crear una logica q lea en los archivos de entreno el mas reciente sea excel o csv asi para todo con la misma
+logica de antes para q el reentreno siempre actualice el archivo con los datos de entrenamiento
+
+Lo otro q hice fue arreglar un pequeño error q habia en el reentrenamiento del multiclasificador pero ya esta correcto
+
+para q funcionen las tareas programadas agreuge  en starup event las lineas de codigo q crean las tareas programadas, q fue lo q recomendo
+chatgpt
+'''
+def classify_empty_tags():
+    conector = DatabaseConnector(db_config)
+    empty_tag_products = conector.data_postgresql_empty_tag('product', ['id', 'name', 'current_price', 'tag','tag_updated_at'])
+    if empty_tag_products.empty:
+        print("Todos los productos están clasificados.")
+    else:
+        df_predictions = clf_voting.predict_tags(empty_tag_products)
+        table_name = 'product'
+        column_name = 'tag'
+        column_name2 = 'tag_updated_at'
+        conector.update_rowP(df_predictions, table_name, column_name)
+        conector.update_rowP(df_predictions, table_name, column_name2)
+        print("Clasificación realizada.")
+
+def retrain_model_with_recent_date():
+    conector = DatabaseConnector(db_config)
+    log_file = 'training_log.txt'
+    # Leer las fechas del archivo de log
+    if os.path.exists(log_file):
+        with open(log_file, 'r') as file:
+            logged_dates = file.read().splitlines()
+    else:
+        logged_dates = []
+    most_recent_date = conector.get_most_recent_tag_updated_at('product')
+    if most_recent_date:
+        most_recent_date_str = most_recent_date.strftime('%Y-%m-%d %H:%M:%S')
+        if most_recent_date_str in logged_dates:
+            print("Ya se realizó el entrenamiento con estos datos.")
+            return
+        df_new = conector.data_postgresql_filtered_by_date('product', ['id', 'name', 'current_price', 'tag'], 'tag', most_recent_date)
+        if df_new.empty:
+            print("No hay datos nuevos para reentrenar.")
+            return
+        clf_voting.retrain_model(excel_file, df_new)
+        print("Reentrenamiento realizado.")
+        with open(log_file, 'a') as file:
+            file.write(most_recent_date_str + '\n')
+    else:
+        print("No se pudo obtener la fecha más reciente.")
+
+
+
 
     
 

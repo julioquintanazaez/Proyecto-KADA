@@ -21,7 +21,7 @@ from utils.text_processor import TextProcessor
 
 class Voting_ProductClassifier:
     def __init__(self):
-        self.vectorizer = CustomTfidfVectorizer(strip_accents='unicode')
+
         self.text_processor = TextProcessor()
         self.combo_classifier = ComboClassifier()
         self.confusion_matrix = []
@@ -98,11 +98,13 @@ class Voting_ProductClassifier:
         new_vectorizer_filename = os.path.join(vectorizer_folder, f'vectorizer_{timestamp}.pkl')
         joblib.dump(self.vectorizer, new_vectorizer_filename)
 
-    def retrain_model(self, new_data):
+    def retrain_model(self,excel_file, new_data):
+        df_train = pd.read_excel(excel_file)
+        df_train['process_name'] = df_train['name'].apply(self.text_processor.text_process)
         model_folder = os.path.join('train_folder', 'train_saves_voting')
         new_data['process_name'] = new_data['name'].apply(self.text_processor.text_process)
 
-        df_combined = pd.concat([self.df_train, new_data], ignore_index=True)
+        df_combined = pd.concat([df_train, new_data], ignore_index=True)
         X_combined = df_combined['process_name']
         y_combined = df_combined['tag']
         X_combined_tfidf = self.vectorizer.transform(X_combined)  # Usar el vectorizador cargado

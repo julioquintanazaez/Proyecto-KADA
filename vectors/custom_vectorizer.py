@@ -24,13 +24,14 @@ priority_words_temp = {
 
 class CustomTfidfVectorizer(TfidfVectorizer):
     def __init__(self):
-        self.priority_words = self.load_priority_words_from_json()  # Cargar priority words from json al iniciar
+        self.priority_words = self.load_priority_words_from_json()
+
 
 
     def load_priority_words_from_json(self):
-        """This method read the priority words from a file. 
+        """This method read the priority words from a file.
         If the file doesn't exists it reae from a temporal priority words.
-        The method return the priority_words as a dictionary 
+        The method return the priority_words as a dictionary
         """
         filename = "priority_words.json"
         priority_folder = os.path.join('vectors', 'priority_words_tags')
@@ -44,8 +45,8 @@ class CustomTfidfVectorizer(TfidfVectorizer):
                 return priority_words["priority_words"]
         except:
             print(f"Cant read the file in the folder {priority_words_tags_file}")
-            return priority_words_temp  
-    
+            return priority_words_temp
+
 
     def fit_transform(self, raw_documents, y=None):
         # Call the parent method to get the original tf-idf matrix
@@ -58,7 +59,7 @@ class CustomTfidfVectorizer(TfidfVectorizer):
         weights = tfidf_matrix.toarray()
 
         # Apply custom weights to the relevant features
-        for word, weight in self.priority_words.items():
+        for word, weight in priority_words_temp.items():
             if word in feature_names:
                 index = feature_names.tolist().index(word)
                 weights[:, index] *= weight
@@ -71,12 +72,15 @@ class CustomTfidfVectorizer(TfidfVectorizer):
         feature_names = self.get_feature_names_out()
         weights = tfidf_matrix.toarray()
 
-        for word, weight in self.priority_words.items():
+        for word, weight in priority_words_temp.items():
             if word in feature_names:
                 index = feature_names.tolist().index(word)
                 weights[:, index] *= weight
 
         return weights
+
+
+
 
 
 
