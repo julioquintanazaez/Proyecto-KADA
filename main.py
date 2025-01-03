@@ -16,7 +16,8 @@ from recomender.recomender import Recomender
 
 from vectors.custom_vectorizer import CustomTfidfVectorizer
 
-from schemas.matrix_response import ListResponse
+from schemas.validators import DateTimeModel
+
 from typing import List
 
 from dotenv import load_dotenv
@@ -57,9 +58,9 @@ def train_model_with_file(file):
     try:
         print("Entro al entrenamiento")
         # Crear una instancia del clasificador de productos
-        excel_file = './otros.xlsx'
+        #excel_file = './otros.xlsx'
         clf_voting.train_model(file)
-        print("Salio al entrenamiento")
+        print("Training done successfuly....")
         return JSONResponse(status_code=200, content="Training successful...")
 
     except Exception as e:        
@@ -144,7 +145,7 @@ async def predict_tags():
 
 
 @app.get("/retrain_model", response_class=JSONResponse)  
-async def retrain_model(date):
+async def retrain_model(date):  #Le agregué un validador de datos estan en la carpeta shcemas
    
     # Se debe leer de la base de datos y crear el dataframe con datos nuevos
     conector = DatabaseConnector(db_config)
@@ -152,14 +153,6 @@ async def retrain_model(date):
     column_name = 'tag'
     rows_query = ['id', 'name', 'description', 'tag']
 
-    """Que fecha se toma para el reentreno del algoritmo, logicamente no debe ser un valor fijo
-    ahora, es una valor pasado por parámetros, o se detecta automáticamente. R: por ahora vamos a pasarlo por paramatro
-                                                                            hasta q se automatice el reentreno , seria bueno
-                                                                            tener las 2 cosas uno manual y uno automatico
-
-    Estuve mirando la lógica de la consulta filtro y escoges los que son distintos de "otros" por lo que
-    deduje que el valor de la variable "column_name" en este caso es "tag".  
-    """
     df_new = conector.data_postgresql_filtered_by_date(table_name, rows_query, column_name, date)  #2024-11-12 19:15:38+00:00
     print(df_new.shape)
     print(df_new.columns)
@@ -189,30 +182,22 @@ async def get_predictions_matrix():
 
 """Esto lo puse para testear que estabamos leyendo las prioritywords
 """
-@app.get("/test_priority_words")  
-async def test_priority_words():
+@app.get("/test_stuff")  
+async def test_stuff():
 
     cvzer = CustomTfidfVectorizer()
+    print(cvzer.priority_words)
 
-    return cvzer.priority_words
+    try:
+        retrain_model_with_recent_date()
+    except TypeError as e:
+        return HTTPException (status_code=404, detail=e)  
 
-'''Estas son las tareas programadas para la clasificacion y el reentreno con la libreria apscheduler puedes testearlas en el runmain
-realmente esto son tareas programadas no se q tan necesario sea crear un endpoint para hacer esto asi q bueno por ahora no lo cree
-porque la idea es q esto se este ejecutando todo el tiempo en ejecucion despues tu dime q te parece, otra cosa no se si llegaste a
-ejecutar el reentrenamiento con la logica de abrir desde un json, me devuelve un error tal q no esta inicializada el atributo q inicializas
+    return "Correct"
+
+'''Otra cosa no se si llegaste a ejecutar el reentrenamiento con la logica de abrir desde un json,
+ me devuelve un error tal q no esta inicializada el atributo q inicializas
 y entonces da error en qnto puedas revisa eso por ahora lo puse a funcionar con los temporales
-
-otra cosa para hacer automatizar el reentreno cree 2 consultas nuevas en la bd una para sacar las los productos con los tags vacios,
-y otra para sacar la fecha mas reciente de clasificacion
-
-Para q no clasifique lo mismo una y otra vez simplemente uso la consulta con tag vacios , en el caso del reentreno creo un log con el 
-entrenamiento, despues quiero crear una logica q lea en los archivos de entreno el mas reciente sea excel o csv asi para todo con la misma
-logica de antes para q el reentreno siempre actualice el archivo con los datos de entrenamiento
-
-Lo otro q hice fue arreglar un pequeño error q habia en el reentrenamiento del multiclasificador pero ya esta correcto
-
-para q funcionen las tareas programadas agreuge  en starup event las lineas de codigo q crean las tareas programadas, q fue lo q recomendo
-chatgpt
 '''
 def classify_empty_tags():
     conector = DatabaseConnector(db_config)

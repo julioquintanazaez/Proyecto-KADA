@@ -22,10 +22,10 @@ priority_words_temp = {
     'sal': 2.0,
 }
 
-class CustomTfidfVectorizer(TfidfVectorizer):
+class CustomTfidfVectorizer(TfidfVectorizer):    
     def __init__(self):
+        super().__init__()
         self.priority_words = self.load_priority_words_from_json()
-
 
 
     def load_priority_words_from_json(self):
@@ -72,7 +72,8 @@ class CustomTfidfVectorizer(TfidfVectorizer):
         feature_names = self.get_feature_names_out()
         weights = tfidf_matrix.toarray()
 
-        for word, weight in priority_words_temp.items():
+        #for word, weight in priority_words_temp.items():
+        for word, weight in self.priority_words.items(): # Mano me faltó el "self." sin eso la clase no sabe quien es priority_words, estoy haciendo la del novato
             if word in feature_names:
                 index = feature_names.tolist().index(word)
                 weights[:, index] *= weight
