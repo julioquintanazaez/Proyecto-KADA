@@ -23,9 +23,19 @@ priority_words_temp = {
 }
 
 class CustomTfidfVectorizer(TfidfVectorizer):    
+    _instance = None  # Atributo de clase para la instancia única
+
+    def __new__(cls):
+        if cls._instance is None:
+            cls._instance = super(CustomTfidfVectorizer, cls).__new__(cls)
+        return cls._instance
+
     def __init__(self):
-        super().__init__()
-        self.priority_words = self.load_priority_words_from_json()
+        # Evitar reinicialización
+        if not hasattr(self, 'initialized'):
+            super().__init__()
+            self.priority_words = self.load_priority_words_from_json()
+            self.initialized = True  # Marcar como inicializado
 
 
     def load_priority_words_from_json(self):
@@ -59,7 +69,7 @@ class CustomTfidfVectorizer(TfidfVectorizer):
         weights = tfidf_matrix.toarray()
 
         # Apply custom weights to the relevant features
-        for word, weight in priority_words_temp.items():
+        for word, weight in self.priority_words.items():  # Error mío no la cambié
             if word in feature_names:
                 index = feature_names.tolist().index(word)
                 weights[:, index] *= weight
@@ -67,7 +77,7 @@ class CustomTfidfVectorizer(TfidfVectorizer):
         # Return the modified tf-idf matrix
         return weights
 
-    def transform(self, raw_documents):
+    def transform(self, raw_documents):        
         tfidf_matrix = super().transform(raw_documents)
         feature_names = self.get_feature_names_out()
         weights = tfidf_matrix.toarray()
