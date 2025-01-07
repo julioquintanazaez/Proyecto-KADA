@@ -159,3 +159,4 @@ websockets==13.1
 Werkzeug==2.3.6
 zipp==3.15.0
 zope.interface==6.0
+APScheduler==3.11.0
