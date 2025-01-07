@@ -101,3 +101,64 @@ class DatabaseConnector:
             print(f"Error al ejecutar la consulta: {e}")
             result = None
         return result
+
+    def get_unique_tags(self):
+        engine = self.connect()
+        query = f"""
+        SELECT DISTINCT tag 
+        FROM {'product'} 
+        WHERE tag IS NOT NULL AND tag != '';
+        """
+        try:
+            df = pd.read_sql_query(query, engine)
+            print("Tags únicos extraídos exitosamente")
+        except Exception as e:
+            print(f"Error al ejecutar la consulta: {e}")
+            df = None
+        return df
+
+    def get_products_ordered_by_tags(self):
+        engine = self.connect()
+        query = f"""
+        SELECT * 
+        FROM {'product'} 
+        ORDER BY CASE 
+            WHEN tag = 'otros' THEN 1 
+            ELSE 0 
+        END, tag;
+        """
+        try:
+            df = pd.read_sql_query(query, engine)
+            print("Productos organizados por tags extraídos exitosamente")
+        except Exception as e:
+            print(f"Error al ejecutar la consulta: {e}")
+            df = None
+        return df
+
+    def update_product_tag(self, product_id, new_tag):
+        engine = self.connect()
+        query = f"""
+        UPDATE {'product'} 
+        SET tag = :new_tag 
+        WHERE id = :product_id;
+        """
+        try:
+            with engine.connect() as connection:
+                # Iniciar una transacción
+                with connection.begin():
+                    result = connection.execute(
+                        text(query),
+                        {'new_tag': new_tag, 'product_id': product_id}
+                    )
+                    if result.rowcount > 0:
+                        print(f"Tag del producto con ID {product_id} actualizado a '{new_tag}' exitosamente")
+                    else:
+                        print(
+                            f"No se encontró ningún producto con ID {product_id}. No se realizó ninguna actualización.")
+        except Exception as e:
+            print(f"Error al actualizar el tag: {e}")
+# Ejemplo de uso:
+# db = DatabaseConnector(db_config)
+# unique_tags = db.get_unique_tags('product')
+# products_ordered = db.get_products_ordered_by_tags('product')
+# db.update_product_tag('product', product_id=1, new_tag='nuevo_tag')

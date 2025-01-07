@@ -60,6 +60,7 @@ class CustomTfidfVectorizer(TfidfVectorizer):
 
     def fit_transform(self, raw_documents, y=None):
         # Call the parent method to get the original tf-idf matrix
+        self.priority_words = self.load_priority_words_from_json()
         tfidf_matrix = super().fit_transform(raw_documents, y)
 
         # Get the feature names
@@ -78,6 +79,7 @@ class CustomTfidfVectorizer(TfidfVectorizer):
         return weights
 
     def transform(self, raw_documents):        
+        self.priority_words = self.load_priority_words_from_json()
         tfidf_matrix = super().transform(raw_documents)
         feature_names = self.get_feature_names_out()
         weights = tfidf_matrix.toarray()
@@ -89,9 +91,6 @@ class CustomTfidfVectorizer(TfidfVectorizer):
                 weights[:, index] *= weight
 
         return weights
-
-
-
 
 
 

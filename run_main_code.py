@@ -40,11 +40,11 @@ df_predictions = clf_voting.predict_tags(df_test)
  
 
 df_predictions['tag_updated_at'] = pd.to_datetime(df_predictions['tag_updated_at'])
-#df_predictions.to_csv('products_predictions_test.csv', index=False)
+df_predictions.to_csv('products_predictions_test.csv', index=False)
 
 df_new = pd.read_excel('otros.xlsx')
-#df_new_cleaned = df_new.dropna(subset=['id', 'name', 'current_price' , 'tag'])
-#clf_voting.retrain_model(excel_file,df_new)
+df_new_cleaned = df_new.dropna(subset=['id', 'name', 'current_price' , 'tag'])
+clf_voting.retrain_model(excel_file,df_new)
 
 load_dotenv()
 def db_start():
@@ -63,10 +63,13 @@ def db_start():
 db_config = db_start()
 
 conector = DatabaseConnector(db_start())
-rows_query = ['id', 'name', 'current_price', 'shop_id','description']
+df_test_unique_tags= conector.get_unique_tags()
+
+
+rows_query = ['id', 'name', 'current_price', 'shop_id','description','tag']
 df_test = conector.data_postgresql_empty_tag('product', rows_query)
-#print(df_test)
-#print(conector.data_postgresql_filtered_by_date('product', rows_query,'tag',conector.get_most_recent_tag_updated_at('product')))
+
+
 
 
 def classify_empty_tags():
@@ -136,8 +139,8 @@ def retrain_model_with_recent_date():
 scheduler = BackgroundScheduler()
 
 # Agregar tareas programadas (cada 1 minuto)
-scheduler.add_job(classify_empty_tags, 'interval', minutes=1, id='classify_job', replace_existing=True)
-scheduler.add_job(retrain_model_with_recent_date, 'interval', minutes=1, id='retrain_job', replace_existing=True)
+#scheduler.add_job(classify_empty_tags, 'interval', minutes=1, id='classify_job', replace_existing=True)
+#scheduler.add_job(retrain_model_with_recent_date, 'interval', minutes=1, id='retrain_job', replace_existing=True)
 
 # Iniciar el programador
 scheduler.start()
